@@ -120,7 +120,7 @@
     },
     mounted: function() {
       this.player = document.getElementById(this.playerUniqId)
-      if (this.player ==nil){ return false;} //追加変更
+      if (this.player ===null){ return false;} //追加変更
 
       this.player.addEventListener('ended', () => {
         this.isPlaying = false
