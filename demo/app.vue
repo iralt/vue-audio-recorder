@@ -10,12 +10,11 @@
     <div class="toggle" @click="toggle">TOGGLE</div>
 
     <audio-recorder v-if="showRecorder"
-      upload-url="some url"
+      upload-url="https://alt-ai-phone.s3.amazonaws.com/snd/254/20210322174459"
       filename="ninja"
       format="wav"
-      :attempts="3"
+      :attempts="10"
       :time="2"
-      :headers="headers"
       :before-recording="callback"
       :pause-recording="callback"
       :after-recording="callback"
@@ -37,7 +36,7 @@
         mp3: '/demo/example.mp3',
         showRecorder: true,
         headers: {
-          'X-Custom-Header': 'some data'
+          'X-Custom-Header': 'aaa'
         }
       }
     },
