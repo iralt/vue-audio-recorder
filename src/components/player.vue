@@ -120,6 +120,7 @@
     },
     mounted: function() {
       this.player = document.getElementById(this.playerUniqId)
+      if (!this.player){ return false;} //追加
 
       this.player.addEventListener('ended', () => {
         this.isPlaying = false
