@@ -120,7 +120,7 @@
     },
     mounted: function() {
       this.player = document.getElementById(this.playerUniqId)
-      if (this.player ===null){ return false;} //追加変更
+      if (this.player != null){ //追加変更
 
       this.player.addEventListener('ended', () => {
         this.isPlaying = false
@@ -136,6 +136,7 @@
       this.$eventBus.$on('remove-record', () => {
         this._resetProgress()
       })
+      }
     },
     computed: {
       audioSource () {
